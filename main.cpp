@@ -50,7 +50,7 @@ int main() {
         if (cmdflag == 1) {
             if (rcmd == 'a') {
                 sat.printf("rcmd=%c,cmdflag=%d\r\n",rcmd,cmdflag);
-                com.printf("Hepta-Sat Lite Uplink Ok\r\n");
+                com.printf("Hepta-Sat Uplink Ok\r\n");
                 for(int j=0;j<5;j++){
                     com.printf("Hello World!\r\n");
                     condition = 1;
@@ -58,7 +58,7 @@ int main() {
                 }
             }else if (rcmd == 'b') {
                 sat.printf("rcmd=%c,cmdflag=%d\r\n",rcmd,cmdflag);
-                com.printf("Hepta-Sat Lite Uplink Ok\r\n");
+                com.printf("Hepta-Sat Uplink Ok\r\n");
                 char str[100];
                 mkdir("/sd/mydir", 0777);
                 FILE *fp = fopen("/sd/mydir/satdata.txt","w");
@@ -80,7 +80,7 @@ int main() {
                 fclose(fp);                
             }else if (rcmd == 'c') {        
                 sat.printf("rcmd=%c,cmdflag=%d\r\n",rcmd,cmdflag);
-                com.printf("Hepta-Sat Lite Uplink Ok\r\n");
+                com.printf("Hepta-Sat Uplink Ok\r\n");
                 float ax,ay,az;
                 for(int i = 0; i<10; i++) {
                     sensor.sen_acc(&ax,&ay,&az);
@@ -89,7 +89,7 @@ int main() {
                 }
             }else if (rcmd == 'd') {
                 sat.printf("rcmd=%c,cmdflag=%d\r\n",rcmd,cmdflag);
-                com.printf("Hepta-Sat Lite Uplink Ok\r\n");
+                com.printf("Hepta-Sat Uplink Ok\r\n");
                 float gx,gy,gz;
                 for(int i = 0; i<10; i++) {
                     sensor.sen_gyro(&gx,&gy,&gz);
